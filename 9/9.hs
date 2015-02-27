@@ -8,5 +8,5 @@
  - Find the product abc.
  - -}
 
- tripletProduct n = head [a*b*c | a <- [1..n-2], b <- [a..(n-a-1)], c <- [b..(n-a-b)], a+b+c==n, a^2 + b^2 == c^2]
- ---tripletProduct 1000
+tripletProduct n = head $ take 1 [a*b*c | a <- [1..n-2], b <- [a..(n-a-1)], c <- [n-a-b], a^2 + b^2 == c^2]
+--tripletProduct 1000
